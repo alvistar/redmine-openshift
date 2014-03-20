@@ -23,6 +23,10 @@ Add this upstream Redmine quickstart repo
 	git remote add upstream -m master https://github.com/alvistar/redmine-openshift.git
 	git pull -s recursive -X theirs upstream master
 
+This will disable xapian gem (needed for fulltext search)
+
+	rhc env set BUNDLE_WITHOUT=xapian
+
 Then push the repo upstream
 
 	git push
